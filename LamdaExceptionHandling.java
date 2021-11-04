@@ -8,7 +8,7 @@ public class LamdaExceptionHandling {
 		
 		Integer [] numbers = {1,2,3,4,5,6};
 		
-		process(numbers, 0, (k,v)->System.out.println(k/v));
+		process(numbers, 0, wrapper((k,v)->System.out.println(k/v)));
 	}
 	
 	private static void process(Integer [] numbers, int key, BiConsumer<Integer, Integer> biConsumer) {
